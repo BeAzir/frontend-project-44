@@ -35,7 +35,7 @@ const brainGcd = () => {
 				        console.log('Correct!')
 				    } else {
 					            const correctAnswer = gcd(randomNum1, randomNum2);
-					            return console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\n Let's try again ${name}`);
+					            return console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again ${name}`);
 					        }
 
 		        if(i === 3){
