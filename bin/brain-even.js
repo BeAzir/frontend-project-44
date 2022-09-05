@@ -2,7 +2,7 @@
 import readlineSync from 'readline-sync';
 
 const brainEven = () => {
-    const name = readlineSync.question("May i have your name?: ");
+    const name = readlineSync.question("May I have your name? ");
     console.log(`Hello, ${name}!`);
     let result = 0;
     console.log('Answer "yes" if the number is even, otherwise answer "no".')
@@ -10,8 +10,8 @@ const brainEven = () => {
     const randomNumber = Math.random() * 10;
     const roundNumber = Math.round(randomNumber);
 
-        console.log(roundNumber);
-        const answer = readlineSync.question('Your answer? ')
+	console.log(`Question: ${roundNumber}`);
+        const answer = readlineSync.question('Your answer: ')
 
         if(roundNumber % 2 === 0 && answer !== 'yes'){
             return console.log(`'No' is wrong asnwer ;(. Correct answer was 'yes'.\n Let's try again, ${name}!`)
