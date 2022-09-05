@@ -45,7 +45,7 @@ const brainCalc = () => {
 				            } else {
 						                const CorrectAnswer = String(mutant(randomNum1, randomSign, randomNum2));
 						                const wrongAnswer = String(answer);
-						                return console.log(`${wrongAnswer} is wrong answer ;(. Correct answer was ${CorrectAnswer}.\nLet's try again, ${name}`);
+						                return console.log(`${wrongAnswer} is wrong answer ;(. Correct answer was ${CorrectAnswer}.\nLet's try again, ${name}!`);
 						            }
 
 		            if (i === 3){
