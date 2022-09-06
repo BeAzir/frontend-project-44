@@ -2,7 +2,7 @@
 
 import readlineSync from 'readline-sync';
 
-const getRandom = (min, max) => { return Math.round(Math.random() * (max - min);) };
+const getRandom = (min, max) => { return Math.round(Math.random() * (max - min)) };
 const getRandomSign = () => {
   const signs = ['-', '+', '*'];
   const length = signs.length;
