@@ -37,7 +37,7 @@ const brainPrime = () => {
 		            const answer = readlineSync.question('Your answer: ');
 
 		            if(CorrectAnswer === 'Prime' && answer !== 'yes'){
-				                return console.log(`'No' is wrong asnwer ;(. Correct answer was 'yes'.\n Lets try again ${name}`)
+				                return console.log(`'No' is wrong asnwer ;(. Correct answer was 'yes'.\n Let's try again, ${name}!`)
 				            } else if (CorrectAnswer === 'Not prime' && answer !== 'no'){
 						                return console.log(`'yes' is wrong asnwer ;(. Correct answer was 'no'.\n Let's try again, ${name}!`)
 						            }
