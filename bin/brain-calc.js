@@ -1,33 +1,28 @@
 #!/usr/bin/env node
 
-import readlineSync from "readline-sync"
+import readlineSync from 'readline-sync';
 
-const getRandom = (min, max) => {
-	    return Math.round((Math.random() * (max - min)))
-};
-
+const getRandom = (min, max) => return Math.round((Math.random() * (max - min)));
 const getRandomSign = () => {
-	    const signs = ['-', '+', '*'];
-	    const length = signs.length;
-	    const generate = Math.floor(Math.random() * length);
-	    const randomValue = signs[generate];
-	    return randomValue 
+	const signs = ['-', '+', '*'];
+	const length = signs.length;
+	const generate = Math.floor(Math.random() * length);
+	const randomValue = signs[generate];
+	return randomValue
 };
-
 const mutant = (Num1, Sign, Num2) => {
-	        if(Sign === '+'){
-			            return Num1 + Num2
-			        }
+        if (Sign === '+') {
+            return Num1 + Num2
+        };
 
-	        if(Sign === '-'){
-			            return Num1 - Num2
-			        }
+        if (Sign === '-') {
+            return Num1 - Num2
+        };
 
-	        if(Sign === '*'){
-			            return Num1 * Num2
-			        };
+        if (Sign === '*') {
+            return Num1 * Num2
+        };
 };
-
 const brainCalc = () => {
 	    console.log('Welcome to the Brain Games!');
 	    const name = readlineSync.question("May i have your name? ");
