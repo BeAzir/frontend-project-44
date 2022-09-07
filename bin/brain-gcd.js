@@ -4,10 +4,10 @@ import readlineSync from 'readline-sync';
 
 const gcd = (x, y) => {
   if (y > x) {
-  return gcd(y, x);
+    return gcd(y, x);
   }
   if (!y) {
-  return x;
+    return x;
   }
   return gcd(y, x % y);
 };
@@ -39,5 +39,4 @@ function brainGcd() {
     }
   }
 }
-brainGcd();
-	
+brainGcd();	
