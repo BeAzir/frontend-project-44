@@ -22,6 +22,7 @@ const mutant = (Num1, Sign, Num2) => {
   if (Sign === '*') {
     return Num1 * Num2;
   }
+  return undefined
 };
 function brainCalc() {
   console.log('Welcome to the Brain Games!');
