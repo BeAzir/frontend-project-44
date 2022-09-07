@@ -23,5 +23,5 @@ function brainEven() {
       return console.log(`Congratulations, ${name}!`);
     }
   }
-};
+}
 brainEven();
