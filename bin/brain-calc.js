@@ -2,8 +2,8 @@
 
 import readlineSync from 'readline-sync';
 
-const getRandom = (min, max) => { return Math.round(Math.random() * (max - min)) };
-const getRandomSign = () => {
+function getRandom(min, max) { return Math.round(Math.random() * (max - min)); };
+function getRandomSign() {
   const signs = ['-', '+', '*'];
   const length = signs.length;
   const generate = Math.floor(Math.random() * length);
@@ -23,7 +23,7 @@ const mutant = (Num1, Sign, Num2) => {
     return Num1 * Num2;
   }
 };
-const brainCalc = () => {
+function brainCalc() {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May i have your name? ');
   console.log(`Hello, ${name}!`);
@@ -40,7 +40,8 @@ const brainCalc = () => {
     } else { 
       const CorrectAnswer = String(mutant(randomNum1, randomSign, randomNum2));
       const wrongAnswer = String(answer);
-      return console.log(`${wrongAnswer} is wrong answer ;(. Correct answer was ${CorrectAnswer}.\nLet's try again, ${name}!`);	            }
+      return console.log(`${wrongAnswer} is wrong answer ;(. Correct answer was ${CorrectAnswer}.\nLet's try again, ${name}!`);
+    }
     if (i === 3) {
       console.log(`Congratulations, ${name}!`);
     }

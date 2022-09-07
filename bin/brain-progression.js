@@ -35,7 +35,7 @@ function brainProggression() {
   console.log('What number is missing in the progression?');
   for (let i = 1; i <= 3; i += 1) {
     const start = getRandom(1, 15);
-    const step = getRandom(1,5);
+    const step = getRandom(1, 5);
     const elementsOfProggression = progression(start, step);
     const bluredProgression = blur(elementsOfProggression);
     const bluredElement = bluredProgression[1];
@@ -46,9 +46,9 @@ function brainProggression() {
     if (answer === String(bluredElement)) {
       console.log('Correct!');
     } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${bluredElement}'.\n Let's try again, ${name}!`);    
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${bluredElement}'.\n Let's try again, ${name}!`);
     }
-    if (i === 3 ) {
+    if (i === 3) {
       return console.log(`Congratulations, ${name}!`);
     }
   }
