@@ -4,14 +4,14 @@ import readlineSync from 'readline-sync';
 function primeOrNot(number) {
   const coll = [];
   for (let i = 1; i <= number; i += 1) {
-    if(number % i === 0){
+    if (number % i === 0) {
       coll.push(i);
     }
   }
   if (coll.length === 2) {
     return 'Prime';
   }
-    return 'Not prime';
+  return 'Not prime';
 }
 
 function getRandom(min, max) {
@@ -32,15 +32,15 @@ function brainPrime() {
     const answer = readlineSync.question('Your answer: ');
 
     if (CorrectAnswer === 'Prime' && answer !== 'yes') {
-    return console.log(`'No' is wrong asnwer ;(. Correct answer was 'yes'.\n Let's try again, ${name}!`);
-            } else if (CorrectAnswer === 'Not prime' && answer !== 'no') {
-               return console.log(`'yes' is wrong asnwer ;(. Correct answer was 'no'.\n Let's try again, ${name}!`);
-  }
-            console.log('Correct!');
-
-           if(i === 3){
-                return console.log(`Congratulations, ${name}!`);
-   }
+      return console.log(`'No' is wrong asnwer ;(. Correct answer was 'yes'.\n Let's try again, ${name}!`);
+    } else if (CorrectAnswer === 'Not prime' && answer !== 'no') {
+      return console.log(`'yes' is wrong asnwer ;(. Correct answer was 'no'.\n Let's try again, ${name}!`);
     }
-};
+    console.log('Correct!');
+
+    if (i === 3) {
+      return console.log(`Congratulations, ${name}!`);
+    }
+  }
+}
 brainPrime();
