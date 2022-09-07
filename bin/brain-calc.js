@@ -2,14 +2,14 @@
 
 import readlineSync from 'readline-sync';
 
-function getRandom(min, max) { return Math.round(Math.random() * (max - min)); };
+function getRandom(min, max) { return Math.round(Math.random() * (max - min)); }
 function getRandomSign() {
   const signs = ['-', '+', '*'];
   const length = signs.length;
   const generate = Math.floor(Math.random() * length);
   const randomValue = signs[generate];
   return randomValue;
-};
+}
 const mutant = (Num1, Sign, Num2) => {
   if (Sign === '+') {
     return Num1 + Num2;
@@ -37,7 +37,7 @@ function brainCalc() {
 
     if (answer === String(mutant(randomNum1, randomSign, randomNum2))) {
       console.log('Correct!');
-    } else { 
+    } else {
       const CorrectAnswer = String(mutant(randomNum1, randomSign, randomNum2));
       const wrongAnswer = String(answer);
       return console.log(`${wrongAnswer} is wrong answer ;(. Correct answer was ${CorrectAnswer}.\nLet's try again, ${name}!`);
@@ -46,6 +46,6 @@ function brainCalc() {
       console.log(`Congratulations, ${name}!`);
     }
   }
-};
+}
 
 brainCalc();

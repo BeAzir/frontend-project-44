@@ -39,4 +39,4 @@ function brainGcd() {
     }
   }
 }
-brainGcd();	
+brainGcd();
