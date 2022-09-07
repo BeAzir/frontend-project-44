@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-const brainEven = () => {
+function brainEven() {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -21,7 +21,7 @@ const brainEven = () => {
 
     if (i === 3) {
       return console.log(`Congratulations, ${name}!`);
-  }
+    }
   }
 };
 brainEven();
