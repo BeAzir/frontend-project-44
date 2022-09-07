@@ -1,61 +1,55 @@
 #!/usr/bin/env node
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
-const getRandom = (min, max) => {
-	    min = Math.ceil(min);
-	    max = Math.floor(max);
-	    return Math.floor(Math.random() * (max - min + 1) + min)
+function getRandom(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function progression(start, step) {
+    let result = start;
+    const coll = [];
+    for (let i = 1; i <= 10; i += 1) {
+            result = result + step;
+            coll.push(result);
+        }
+    return (coll);
 };
 
-const progression = (start, step) => {
-	    let result = start
-	    const coll = []
-	    for(let i = 1; i <= 10; i +=1){
-		            result = result + step
-		            coll.push(result);
-		        };
-	    return (coll);
+function blur(array) {
+    const length = array.length;
+    const mainArray = [];
+    const randomIndex = Math.floor(Math.random() * length);
+    const bluredElement = array[randomIndex];
+    array[randomIndex] = '..';
+    mainArray.push(array);
+    mainArray.push(bluredElement);
+    return mainArray;
 };
 
-const blur = (array) => {
-	    const length = array.length
-	    const mainArray = []
-	    const randomIndex = Math.floor(Math.random() * length);
-	    const bluredElement = array[randomIndex];
-	    array[randomIndex] = '..'
-	    mainArray.push(array)
-	    mainArray.push(bluredElement)
-	    return mainArray;
-};
+function brainProggression() {
+    console.log('Welcome to the Brain Games!');
+    const name = readlineSync.question('May i have your name? ');
+    console.log(`Hello, ${name}!`);
+    console.log('What number is missing in the progression?');
+	    for (let i = 1; i <= 3; i += 1) {
+            const start = getRandom(1, 15);
+            const step = getRandom(1,5);
+            const elementsOfProggression = progression(start, step);
+            const bluredProgression = blur(elementsOfProggression);
+            const bluredElement = bluredProgression[1];
+            const outPutProgression = (bluredProgression[0]).join(' ');
+            console.log(`Question: ${outPutProgression}`);
+            const answer = readlineSync.question(`Your answer: `);
 
-const brainProggression = () => {
-	    console.log('Welcome to the Brain Games!');
-	    const name = readlineSync.question("May i have your name? ");
-	    console.log(`Hello, ${name}!`);
-	    console.log('What number is missing in the progression?');
-
-	    for(let i = 1; i <= 3; i += 1){
-		            const start = getRandom(1, 15);
-		            const step = getRandom(1,5);
-		            const elementsOfProggression = progression(start, step)
-		            const bluredProgression = blur(elementsOfProggression);
-		            const bluredElement = bluredProgression[1];
-		            const outPutProgression = (bluredProgression[0]).join(' ');
-
-
-		            console.log(`Question: ${outPutProgression}`);
-		            const answer = readlineSync.question(`Your answer: `)
-
-
-		            if(answer === String(bluredElement)){
-				                console.log('Correct!');
-				            } else {
-						                return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${bluredElement}'.\n Let's try again, ${name}!`);
-						            }
-
-		            if(i === 3){
-				                return console.log(`Congratulations, ${name}!`)
-				            }
-		        }
-};
+            if (answer === String(bluredElement)) {
+                console.log('Correct!');
+            } else {
+return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${bluredElement}'.\n Let's try again, ${name}!`);            }
+            if (i === 3 ){
+                return console.log(`Congratulations, ${name}!`);
+           }
+        }
+}
 brainProggression();
