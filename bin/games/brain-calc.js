@@ -38,11 +38,12 @@ function brainCalc() {
     if (answer === String(mutant(randomNum1, randomSign, randomNum2))) {
       output = 'Correct!';
       console.log(output);
-    } else {
+    }
+    if (answer !== String(mutant(randomNum1, randomSign, randomNum2))) {
       const CorrectAnswer = String(mutant(randomNum1, randomSign, randomNum2));
       const wrongAnswer = String(answer);
       output = `${wrongAnswer} is wrong answer ;(. Correct answer was ${CorrectAnswer}.\nLet's try again, ${name}!`;
-      return output;
+      return console.log(output);
     }
   };
   const result = `Congratulations, ${name}!`;
