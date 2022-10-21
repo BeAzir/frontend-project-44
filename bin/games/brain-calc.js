@@ -34,9 +34,9 @@ function brainCalc() {
     const randomSign = getRandomSign();
     console.log(`Question: ${randomNum1} ${randomSign} ${randomNum2}`);
     const answer = readlineSync.question('Your answer: ');
-
+    let output;
     if (answer === String(mutant(randomNum1, randomSign, randomNum2))) {
-      let output = 'Correct!';
+      output = 'Correct!';
     } else {
       const CorrectAnswer = String(mutant(randomNum1, randomSign, randomNum2));
       const wrongAnswer = String(answer);
