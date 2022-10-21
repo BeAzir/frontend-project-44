@@ -37,16 +37,16 @@ function brainCalc() {
     let output;
     if (answer === String(mutant(randomNum1, randomSign, randomNum2))) {
       output = 'Correct!';
+      console.log(output);
     } else {
       const CorrectAnswer = String(mutant(randomNum1, randomSign, randomNum2));
       const wrongAnswer = String(answer);
-      output = `${wrongAnswer} is wrong answer ;(. Correct answer was ${CorrectAnswer}.\nLet's try again, ${name}!`
+      output = `${wrongAnswer} is wrong answer ;(. Correct answer was ${CorrectAnswer}.\nLet's try again, ${name}!`;
+      return output;
     }
-    if (i === 3) {
-      output = `Congratulations, ${name}!`;
-    }
-    return output;
-  }
+  };
+  const result = `Congratulations, ${name}!`;
+  return console.log(result);
 }
 
 brainCalc();
