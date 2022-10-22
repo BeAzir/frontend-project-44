@@ -14,9 +14,9 @@ function primeOrNot(number) {
   return 'Not prime';
 }
 
-function getRandom(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+function getRandom(minimum, maximum) {
+  const min = Math.ceil(minimum);
+  const max = Math.floor(maximum);
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
@@ -33,14 +33,12 @@ function brainPrime() {
 
     if (CorrectAnswer === 'Prime' && answer !== 'yes') {
       return console.log(`'No' is wrong asnwer ;(. Correct answer was 'yes'.\n Let's try again, ${name}!`);
-    } else if (CorrectAnswer === 'Not prime' && answer !== 'no') {
+    } 
+    if (CorrectAnswer === 'Not prime' && answer !== 'no') {
       return console.log(`'yes' is wrong asnwer ;(. Correct answer was 'no'.\n Let's try again, ${name}!`);
     }
     console.log('Correct!');
-
-    if (i === 3) {
-      return console.log(`Congratulations, ${name}!`);
-    }
   }
+  return console.log(`Congratulations, ${name}!`);
 }
 brainPrime();
