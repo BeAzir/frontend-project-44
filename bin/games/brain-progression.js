@@ -24,7 +24,7 @@ function blur(arr) {
   mainArray[randomIndex] = '..';
   mainArray.push(bluredElement);
   return mainArray;
-} 
+}
 
 function brainProggression() {
   console.log('Welcome to the Brain Games!');
@@ -36,7 +36,7 @@ function brainProggression() {
     const step = getRandom(1, 5);
     const elementsOfProggression = progression(start, step);
     const bluredProgression = blur(elementsOfProggression);
-    const bluredElement = bluredProgression.splice(bluredProgression.length - 1,1);
+    const bluredElement = bluredProgression.splice(bluredProgression.length - 1, 1);
     const outPutProgression = (bluredProgression).join(' ');
     console.log(`Question: ${outPutProgression}`);
     const answer = readlineSync.question('Your answer: ');
