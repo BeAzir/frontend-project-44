@@ -29,14 +29,12 @@ function brainGcd() {
 
     if (answer === String(gcd(randomNum1, randomNum2))) {
       console.log('Correct!');
-    } else {
+    }
+    if (answer !== String(gcd(randomNum1, randomNum2))) {
       const correctAnswer = gcd(randomNum1, randomNum2);
       return console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`);
     }
-
-    if (i === 3) {
-      return console.log(`Congratulations, ${name}!`);
-    }
   }
+  return console.log(`Congratulations, ${name}!`);
 }
 brainGcd();

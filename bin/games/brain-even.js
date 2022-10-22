@@ -15,7 +15,6 @@ function brainEven() {
     if (roundNumber % 2 === 0 && answer !== 'yes') {
       return console.log(`'No' is wrong asnwer ;(. Correct answer was 'yes'.\n Let's try again, ${name}!`);
     }
-    
     if (roundNumber % 2 !== 0 && answer !== 'no') {
       return console.log(`'yes' is wrong asnwer ;(. Correct answer was 'no'.\n Let's try again, ${name}!`);
     }
