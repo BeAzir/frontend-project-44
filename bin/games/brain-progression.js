@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-function getRandom(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+function getRandom(minimum, maximum) {
+  const min = Math.ceil(minimum);
+  const max = Math.floor(maximum);
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
@@ -45,12 +45,11 @@ function brainProggression() {
 
     if (answer === String(bluredElement)) {
       console.log('Correct!');
-    } else {
+    }
+    if (answer !== String(bluredElement)) {
       return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${bluredElement}'.\n Let's try again, ${name}!`);
     }
-    if (i === 3) {
-      return console.log(`Congratulations, ${name}!`);
-    }
   }
+  return console.log(`Congratulations, ${name}!`);
 }
 brainProggression();
