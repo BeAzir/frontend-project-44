@@ -21,8 +21,8 @@ const mutant = (Num1, Sign, Num2) => {
   if (Sign === '*') {
     return Num1 * Num2;
   }
-  return undefined
-}
+  return undefined;
+};
 function brainCalc() {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May i have your name? ');
@@ -46,7 +46,7 @@ function brainCalc() {
       console.log(output);
       break;
     }
-  };
+  }
   const result = `Congratulations, ${name}!`;
   return console.log(result);
 }
