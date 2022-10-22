@@ -17,16 +17,14 @@ function progression(start, step) {
   return (coll);
 }
 
-function blur(array) {
-  const length = array.length;
-  const mainArray = [];
-  const randomIndex = Math.floor(Math.random() * length);
-  const bluredElement = array[randomIndex];
-  array[randomIndex] = '..';
-  mainArray.push(array);
+function blur(arr) {
+  const mainArray = [...arr];
+  const randomIndex = Math.floor(Math.random() * arr.length);
+  const bluredElement = mainArray[randomIndex];
+  mainArray[randomIndex] = '..';
   mainArray.push(bluredElement);
   return mainArray;
-}
+} 
 
 function brainProggression() {
   console.log('Welcome to the Brain Games!');
@@ -38,8 +36,8 @@ function brainProggression() {
     const step = getRandom(1, 5);
     const elementsOfProggression = progression(start, step);
     const bluredProgression = blur(elementsOfProggression);
-    const bluredElement = bluredProgression[1];
-    const outPutProgression = (bluredProgression[0]).join(' ');
+    const bluredElement = bluredProgression.splice(bluredProgression.length - 1,1);
+    const outPutProgression = (bluredProgression).join(' ');
     console.log(`Question: ${outPutProgression}`);
     const answer = readlineSync.question('Your answer: ');
 
